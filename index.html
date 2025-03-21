@@ -6,8 +6,16 @@
     <title>โครก | croak croak croak</title>
     <meta name="description" content="ติดตามโครก โครก โครก เพื่อเรียนรู้การเลี้ยงอึ่งและการบริหารฟาร์ม">
     <meta name="keywords" content="โครก, croak, อึ่งอ่าง, อึ่งเพ้า, เพาะเลี้ยงสัตว์, ฟาร์มอึ่ง">
+    
+    <!-- ไอคอนเว็บไซต์ -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='90%' font-size='90'>🐸</text></svg>">
+
+    <!-- Font Awesome สำหรับไอคอน -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- CSS -->
     <style>
+        /* พื้นฐานของหน้าเว็บ */
         body {
             background: #F7E7CE;
             color: #2C4A52;
@@ -16,6 +24,8 @@
             margin: 0;
             padding: 0;
         }
+
+        /* กล่องเนื้อหา */
         .container {
             width: 90%;
             max-width: 400px;
@@ -25,22 +35,40 @@
             border-radius: 15px;
             box-shadow: 0px 4px 10px rgba(44, 74, 82, 0.2);
         }
+
+        /* ซ่อนกล่องเนื้อหาในหน้าจอขนาดเล็ก */
+        @media (max-width: 768px) {
+            .container {
+                background: #FFF2DC;
+                box-shadow: none;
+            }
+            body {
+                background: #FFF2DC;
+            }
+        }
+
+        /* รูปโปรไฟล์ */
         .profile img {
             width: 100px;
             border-radius: 50%;
             margin: 5px 0;
         }
+
+        /* ไอคอนยืนยันตัวตน */
         .verified-check {
             font-size: 12px;
             color: #1DA1F2;
             vertical-align: middle;
         }
+
+        /* เส้นคั่นหัวใจ */
         .heart-container {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 10px 0;
         }
+
         .heart-container::before,
         .heart-container::after {
             content: "";
@@ -49,26 +77,8 @@
             background: #2C4A52;
             margin: 0 10px;
         }
-        .social-icons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        .social-icons a {
-            width: 50px; /* ขยายกล่องให้ใหญ่ขึ้น */
-            height: 50px; /* ขยายกล่องให้ใหญ่ขึ้น */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #FFF2DC;
-            border-radius: 12px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .social-icons a i {
-            color: #2C4A52;
-            font-size: 28px; /* ขยายขนาดไอคอน */
-        }
+
+        /* ปุ่มลิงก์โซเชียล */
         .links a {
             display: flex;
             align-items: center;
@@ -83,61 +93,114 @@
             transition: 0.3s;
             box-shadow: 0px 3px 6px rgba(166, 75, 42, 0.3);
         }
+
         .links a img {
             width: 24px;
             height: 24px;
             margin-right: 10px;
             border-radius: 5px;
         }
+
         .links a span {
             flex-grow: 1;
             text-align: center;
             padding-right: 40px;
         }
+
         .links a:hover {
             background: #93684C;
             transform: scale(1.05);
         }
+
+        /* เพิ่มช่องว่างระหว่างโซเชียลกับ Line */
+        .line-link {
+            margin-top: 20px;
+        }
+
+        /* ไอคอนโซเชียล */
+        .social-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFF2DC;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons a i {
+            color: #2C4A52;
+            font-size: 28px;
+        }
+
+        /* ข้อความติดต่องาน */
         .contact-text {
             margin-top: 20px;
             font-weight: bold;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
+        <!-- โปรไฟล์ -->
         <div class="profile">
-            <img src="https://raw.githubusercontent.com/croak-croak-croak/croak-croak-croak.github.io/main/proflie_jpeg.jpg" alt="Profile Picture">
-            <h2>โครก <span class="verified-check"><i class="fa fa-check-circle"></i></span></h2>
+            <img src="https://raw.githubusercontent.com/croak-croak-croak/croak-croak-croak.github.io/main/profile_jpeg.jpg" alt="Profile Picture">
+            <h2 style="margin-top: 0px; margin-bottom: -10px;">
+                โครก <span class="verified-check"><i class="fa fa-check-circle"></i></span>
+            </h2> 
             <p>มีความสุขในทุกช่วงเวลา</p>
         </div>
+
+        <!-- เส้นคั่นหัวใจ -->
         <div class="heart-container">
             <i class="fa fa-heartbeat" style="color: #FF4444; font-size: 24px;"></i>
         </div>
+
         <h3>กดติดตาม</h3>
+
+        <!-- ลิงก์โซเชียล -->
         <div class="links">
             <a href="https://www.facebook.com/share/1FVdaL1VA1/?mibextid=wwXIf">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook"><span>Facebook</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+                <span>Facebook</span>
             </a>
             <a href="https://www.instagram.com/croak_croakcroak">
-                <img src="https://freelogopng.com/images/all_img/1658587303instagram-png.png" alt="Instagram"><span>Instagram</span>
+                <img src="https://freelogopng.com/images/all_img/1658587303instagram-png.png" alt="Instagram">
+                <span>Instagram</span>
             </a>
             <a href="https://youtube.com/@croak_croak_croak">
-                <img src="https://freelogopng.com/images/all_img/1656501968youtube-icon-png.png" alt="YouTube"><span>YouTube</span>
+                <img src="https://freelogopng.com/images/all_img/1656501968youtube-icon-png.png" alt="YouTube">
+                <span>YouTube</span>
             </a>
             <a href="https://www.tiktok.com/@croak_croak_croak">
-                <img src="https://freelogopng.com/images/all_img/1655891735tiktok-png-icon.png" alt="TikTok"><span>TikTok</span>
+                <img src="https://freelogopng.com/images/all_img/1655891735tiktok-png-icon.png" alt="TikTok">
+                <span>TikTok</span>
             </a>
-            <a href="https://line.me/ti/g2/ntM-LplsvpRk1eTtluFnI-StCZu8WUW5hz_0Kw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">
-                <img src="https://salepagefast.com/wp-content/uploads/2020/07/Line-Icon-Circle.png" alt="Line"><span>Line</span>
+            <a href="https://line.me/ti/g2/ntM-LplsvpRk1eTtluFnI-StCZu8WUW5hz_0Kw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" class="line-link">
+                <img src="https://salepagefast.com/wp-content/uploads/2020/07/Line-Icon-Circle.png" alt="Line">
+                <span>Line</span>
             </a>
         </div>
-        <div class="social-icons">
-            <a href="tel:+123456789"><i class="fa fa-phone fa-fw fa-2x"></i></a>
-            <a href="mailto:croak0croak@gmail.com"><i class="fa fa-envelope fa-fw fa-2x"></i></a>
-        </div>
-        <p class="contact-text" style="margin-top: 20px;">ติดต่องาน</p>
+
+        <!-- ไอคอนติดต่อ -->
+<div class="social-icons">
+    <a href="tel:+123456789" style="text-decoration: none; color: inherit;">
+        <i class="fa fa-phone fa-fw fa-2x"></i>
+    </a>
+    <a href="mailto:croak0croak@gmail.com" style="text-decoration: none; color: inherit;">
+        <i class="fa fa-envelope fa-fw fa-2x"></i>
+    </a>
+</div> 
+
+        <p class="contact-text">ติดต่องาน</p>
     </div>
 </body>
 </html>
